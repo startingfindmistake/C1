@@ -1,0 +1,1142 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	printf("제 이름은 정영호입니다\n");
+	printf("제 나이는 %d 살입니다\n", 20);
+	printf("제가 사는 곳의 번지수는 %d - %d\n", 123, 456);
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%d x %d = %d \n", 4, 5, 20);
+	printf("%d x %d = %d \n", 7, 9, 7 * 9);
+
+	return 0;
+}
+
+*/
+
+
+/*VarDeclAndlnit.c*/
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int num1 , num2;					//변수 num1, num2의 선언
+	int num3 = 30, num4 = 40;		//변수 num3, num4의 선언 및 초기화
+
+	printf("num1: %d, num2: %d \n, num1, num2");
+	num1 = 10;		//변수 num1의 초기화
+	num2 = 20;		//변수 num2의 초기화
+
+	printf("num1: %d, num2: %d \n", num1, num2);
+	printf("num3: %d, num4: %d \n", num3, num4);
+	return 0;
+}
+*/
+
+//simpleaddtwo.c
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 3;
+	int num2 = 4;
+	int result = num1 + num2;
+
+	printf("덧셈 결과: %d \n", result);
+	printf("%d+%d=%d \n", num1, num2, result);
+	printf("%d와(과) %d의 합은 %d입니다.\n", num1, num2, result);
+	return 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+//4월 24일 수업내용
+/*
+#include <stdio.h>
+int main(void)
+{
+	int num1 = 12;
+	int num2 = 12;
+
+	printf("num1: %d \n", num1);
+	printf("num1++: %d \n", num1++);	//후위 증가
+	printf("num1: %d \n\n", num1);
+
+	printf("num2: %d \n", num2);
+	printf("++num2: %d \n", ++num2);	// 전위 증가
+	printf("num2: %d \n", num2);
+	return 0;
+}
+*/
+
+
+//논리 연산자
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int num1 = 10;
+	int num2 = 12;
+	int result1, result2, result3;
+
+	result1 = (num1 == 10 && num2 == 12);		//and 연산자
+	result2 = (num1 < 12 || num2>12);			//or 연산자
+	result3 = (!num1);							//not 연산자
+
+	printf("result1: %d \n", result1);
+	printf("result2: %d \n", result2);
+	printf("result3: %d \n", result3);
+	return 0;
+}
+*/
+
+
+//키보드로부터의 정수입력을 위한 scanf 함수의 호출
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int result;
+	int num1, num2;
+
+	printf("정수 one: ");
+	scanf("%d", &num1);			//10진수 정수형태로 키보드로 입력받아서, 변수 num1에 저장한다.
+	printf("정수 two: ");
+	scanf("%d", &num2);			//10진수 정수형태로 키보드로 입력받아서 , 변수 num2에 저장한다.
+
+	result = num1 + num2; //결과값
+	printf("%d + %d = %d \n", num1, num2, result);		//num1, num2, result값을 출력한다.
+	return 0;
+}
+*/
+
+//두 개의 정수를 입력 받아 두 수의 뺄셈과 곱셈의 결과 출력
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int result_sum;			//정수형result_sum(덧셈)함수이름 설정
+	int result_mix;		//정수형result_mix(곱셈)함수이름 설정
+	int num1, num2;
+
+	printf("두개의 정수 입력: ");
+	scanf("%d %d", &num1, &num2);
+
+	result_sum = num1 + num2;
+	result_mix = num1 * num2;
+	printf("덧셈결과 %d", result_sum);
+	printf("곱셈결과 %d", result_mix);
+
+	return 0;
+}
+*/
+//세 개의 정수를 입력 받아서 두 수의 뺄셈과 곱셈의 결과 출력
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int result;
+	int num1, num2, num3;
+
+	printf("세 개의 정수 입력: ");
+	scanf("%d %d %d", &num1, &num2, &num3);
+
+	result = num1 * num2 + num3;
+	printf("%d * %d + %d = %d \n", num1, num2, num3, result);
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+
+int main()
+{
+	float f = 0.0F;
+	int i = 0;
+	for (f = 0.0; f < 100.0f; f += 0.1f, i++) {
+		printf("f:%f\n", f);
+		// f로 다른 작업 수행 
+	}
+	printf("i:%d\n", i);
+	return 0;
+}
+
+
+
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 15;		// 00000000	00000000 00000000 00001111
+	int num2 = 20;		// 00000000 00000000 00000000 00010100
+	int num3 = num1 & num2;	// num1과 num2의 비트단위 & 연산
+	printf("AND 연산의 결과: %d \n", num3);
+	return 0;
+}
+
+
+//비트 단위 연산자
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 15;		// 00000000	00000000 00000000 00001111
+	int num2 = 20;		// 00000000 00000000 00000000 00010100
+	int num3 = num1 ^ num2;	// num1과 num2의 비트단위 & 연산
+	printf("XOR 연산의 결과: %d \n", num3);
+	return 0;
+}
+
+
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 15;		// 00000000	00000000 00000000 00001111
+	int num2 = ~num1;	
+	printf("NOT 연산의 결과: %d \n", num2);
+	return 0;
+}
+
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num = 15;
+
+	int result1 = num << 1;	//num의 비트 열을 왼쪽으로 1칸씩 이동
+	int result2 = num << 2; //num의 비트 열을 왼쪽으로 2칸씩 이동
+	int result3 = num << 3;	//num의 비트 열을 왼쪽으로 3칸씩 이동
+
+	printf("1칸 이동 결과: %d \n", result1);
+	printf("2칸 이동 결과: %d \n", result2);
+	printf("3칸 이동 결과: %d \n", result3);
+	return 0;
+}
+*/
+/*
+//입력 받은 정수의 값의 부호를 바꾼다.
+//2의 보수는 부호를 바꾸는 기능을 한다.
+#include<stdio.h>
+
+int main(void)
+{
+	int num;
+	printf("정수 입력: ");
+	scanf_s("%d", &num);
+	num = ~num;
+	num = num + 1;
+	printf("부호를 바꾼 결과: %d \n", num);
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+#include<stdbool.h>
+#include<stdint.h>
+
+int main(void)
+{
+	char ch = 9;
+	int inum = 1052;
+	double dnum = 3.1415;
+	printf("변수 ch의 크기: %d \n", sizeof(ch));
+	printf("변수 inum의 크기: %d \n", sizeof(inum));
+	printf("변수 dnum의 크기: %d \n", sizeof(dnum));
+
+	printf("char의 크기: %d \n", sizeof(char));
+	printf("int의 크기: %d \n", sizeof(int));
+	printf("long의 크기: %d \n", sizeof(long));
+	printf("long long의 크기: %d \n", sizeof(long long));
+	printf("float의 크기: %d \n", sizeof(float));
+	printf("float의 크기: %d \n", sizeof(double));
+	return 0;
+}
+*/
+//stdint.h를 사용하는 코드(C99)
+/*
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
+
+int main(void)
+{
+	printf("char : %lu\n", sizeof(int8_t));
+	printf("short : %lu\n", sizeof(int16_t));
+	printf("int : %lu\n", sizeof(int32_t));
+	printf("long : %lu\n", sizeof(int64_t));
+	printf("float : %lu\n", sizeof(float));
+	printf("double : %lu\n", sizeof(double));
+
+	return 0;
+}
+
+*/
+//3x8/4를 연산자 없이 구현한다.
+//8과 4가 모두 2의 배수라는 사실을 활용해서
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num = 3;
+	num = num << 3;		//8의 곱
+	num = num >> 2;		//4의 제
+	printf("%d \n", num);
+	return 0;
+}
+
+*/
+
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	char num1 = 1, num2 = 2, result1 = 0;
+	short num3 = 300, num4 = 400, result2 = 0;
+
+	printf("size of num1 & num2: %d, %d \n", sizeof(num1), sizeof(num2));
+	printf("size of num3 & num4: %d, %d \n", sizeof(num3), sizeof(num4));
+	
+	printf("size of char add: %d \n", sizeof(num1 + num2));
+	printf("size of short add: %d \n", sizeof(num3 + num4));
+
+	result1 = num1 + num2;
+	result2 = num3 + num4;
+	printf("size of result1 & result2: %d, %d \n", sizeof(result1), sizeof(result2));
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	double rad;
+	double area;
+	printf("원의 반지름 입력: ");
+	scanf_s("%lf", &rad);
+
+	area = rad * rad * 3.1415;
+	printf("원의 넓이: %f \n", area);
+	return 0;
+}
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	char ch1 = 'A', ch2 = 65;
+	int ch3 = 'Z', ch4 = 90;
+
+	printf("%c %d \n", ch1, ch1);
+	printf("%c %d \n", ch2, ch2);		//%c는 문자의 형태로 데이터를 출력또는 입력하라
+	printf("%c %d \n", ch3, ch3);
+	printf("%c %d \n", ch4, ch4);		//정수는 출력의 방법에 따라서 문자의 형태로도, 숫자의 형태로도 출력이 가능하다.
+	return 0;
+}
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int left_x, left_y;
+	int right_x, right_y;
+	int mix;
+	printf("좌 상단의 x, y 좌표:");
+	scanf_s("%d %d", &left_x, &left_y);
+	printf("우 하단의 x, y 좌표: ");
+	scanf_s("%d %d", &right_x, &right_y);
+	
+	mix = (right_x - left_x) * (right_y - left_y);
+	printf("두 점이 이루는 직사각형의 넓이는 %d 입니다\n", mix);
+	return 0;
+	
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	double num1 = 245;		// 실수로 계산된다.
+	int num2 = 3.1415;		// 소수점을 버린다
+	int num3 = 129;			
+	char ch = num3;			//overflow 발생
+
+	printf("정수 245를 실수로: %f \n", num1);
+	printf("실수 3.1415를 정수로: %d \n", num2);
+	printf("큰 정수 129를 작은 정수로: %d \n", ch);
+	return 0;
+}
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 3, num2 = 4;
+	double divResult;
+	divResult = num1 / num2;		//연산 결과의 자료형은 피 연산자의 자료형과 일치
+	printf("나눗셈 결과: %f \n", divResult);
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 3, num2 = 4;
+	double divResult;
+	divResult = (double)num1 / num2;		//연산 결과의 자료형은 피 연산자의 자료형과 일치
+	printf("나눗셈 결과: %f \n", divResult);
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 7, num2 = 13;
+	printf("%o %#o \n", num1, num1);		//8진수
+	printf("%x %#x \n", num2, num2);		//16진수
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	double d1 = 1.23e-3;		//0.00123
+	double d2 = 1.23e-4;		//0.000123
+	double d3 = 1.23e-5;		//0.0000123
+	double d4 = 1.23e-6;		//0.00000123
+
+	printf("%g \n", d1);		//%f 스타일 출력
+	printf("%g \n", d2);		//%f 스타일 출력
+	printf("%g \n", d3);		//%f 스타일 출력
+	printf("%g \n", d4);		//%f 스타일 출력
+
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%-8s %14s %5s \n", "이 름", "전자학과", "학년");
+	printf("%-8s %14s %5d \n", "김동수", "전자공학", "3");
+	printf("%-8s %14s %5d \n", "김동수", "AI컴퓨터공학", "2");
+	printf("%-8s %14s %5d \n", "김동수", "미술학과", "4");
+
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int num = 0;
+
+	while (num < 5)		//반복의 조건은 num<5
+	{
+		printf("Hello world! %d \n", num);
+		num++;		//이로 인해 num의 값이 0->1로 변경된다. 
+	}
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int dan = 0, num = 1;
+	printf("몇 단? ");
+	scanf_s("%d", &dan);
+
+	while (num < 10)
+	{
+		printf("%dx%d=%d \n", dan, num, dan * num);
+		num++;
+	}
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int num;
+	int i = 0;
+
+	printf("양의 정수 입력: ");
+	scanf_s("%d", &num);
+
+	while (i < num)
+	{
+		printf("Hello world! \n");
+		i++;
+	}
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int i = 0, j = 0;
+	int num;
+	while (i < 10) {
+		while (j < 10) {
+			num++;
+			j++;
+		}
+		i++;
+		j = 0;
+	}
+}
+*/
+/*
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+int main(void)
+{
+	int total = 0, num = 0;
+
+	do         //먼저 실행한후 반복한다.
+	{
+		printf("정수 입력(0 to quit): ");
+		scanf("%d", &num);
+		total += num;
+	} while (num != 0);
+	printf("합계: %d \n", total);
+	return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int total = 0; //변수 설정
+	int i, num; //i, num 변수 설정한다.
+	printf("0부터 num까지의 덧셈, num은? ");
+	scanf("%d", &num);	//num의 값을 입력받는다.
+
+	for (i = 0; i < num + 1; i++)		//i=0으로 만드는 초기식, i<num작을때 조건식, i++ => i가 1씩 증가한다는 증감식
+		total += i;	//total에 i값을 더해서 저장한다.
+
+	printf("0부터 %d까지 덧셈결과: %d \n", num, total);
+	return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int cur, is;	//cur, is를 변수를 선언한다.
+
+	for (cur = 2; cur < 10; cur++)	//반복문 초기식 cur=2, 조건식 cur <10; 증감식 cur++
+	{
+		for (is = 1; is < 10; is++)	//반복문 초기식 cur=2; 조건식 cur <10; 증감식 is++
+			printf("%d x %d = %d \n", cur, is, cur * is);
+		printf("\n");
+	}
+	return 0;
+}
+*/
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int num;
+	printf("정수 입력: ");
+	scanf("%d", &num);		//사용자로 부터 num의 입력을 받는다.
+
+	if (num < 0)	// num이 0보다 작으면 아래의 문장 실행
+		printf("입력 값은 0보다 작다. \n");
+
+	if (num > 0)	// num이 0보다 크면 아래의 문장 실행
+		printf("입력 값은 0보다 크다. \n");
+
+	if (num == 0)		// num이 0이면 아래의 문장 실행
+		printf("입력 값은 0이다. \n");
+
+	return 0;
+}
+
+
+
+*/
+
+//프로그램의 사용자로부터 두개의 정수를 입력받아서, 두 정수를 포함하여 그 사이에 존재하는 정수들의 합을 계산한다.
+/*
+#include<stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int a, b;
+
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int opt;	//정수형 변수 선언
+	double num1, num2;	//실수형 변수 선언
+	double result;		//결과 값을 실수형으로 출력
+
+	printf("1. 덧셈 2. 뺄셈 3. 곳셈 4.나눗셈 \n");
+	printf("선택? ");
+	scanf("%d", &opt);			//무엇을 선택할지 숫자 형태로 입력을 받는다.
+	printf("두 개의 실수 입력: ");
+	scanf("%lf %lf", &num1, &num2);		//두개의 실수를 사용자로 부터 입력 받는다
+
+
+	if (opt == 1)					//조건식 opt ==1일때
+		result = num1 + num2;		//실행한다
+	if (opt == 2)					//조건식 opt ==2일때
+		result = num1 - num2;		//실행한다
+	if (opt == 3)					//조건식 opt ==3일때
+		result = num1 * num2;		//실행한다
+	if (opt == 4)					//조건식 opt ==4일때
+		result = num1 / num2;		// 실행한다
+
+	printf("결과: %f \n", result);		//조건식이 차례대로 실행되고 나서 마지막 결과값을 출력한다.
+	return 0;
+}
+
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	int num;				//num의 변수를 선언하다.
+	printf("정수 입력: ");	
+	scanf("%d", &num);		//입력
+
+	if (num < 0)
+		printf("입력 값은 0보다 작다. \n");
+	else
+		printf("입력 값은 0보다 작지 않다. \n");
+
+	return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int opt;	//정수형 변수 선언
+	double num1, num2;	//실수형 변수 선언
+	double result;		//결과 값을 실수형으로 출력
+
+	printf("1. 덧셈 2. 뺄셈 3. 곳셈 4.나눗셈 \n");
+	printf("선택? ");
+	scanf("%d", &opt);			//무엇을 선택할지 숫자 형태로 입력을 받는다.
+	printf("두 개의 실수 입력: ");
+	scanf("%lf %lf", &num1, &num2);		//두개의 실수를 사용자로 부터 입력 받는다
+
+
+	if (opt == 1)					//조건 1만족시 실행 첫번째로 평가된다
+		result = num1 + num2;		
+	else if (opt == 2)					//조건 1이 아니면 두번째로 평가되는데 만약 조건이 맞는다면 실행하고 밑에 있는 if문이 아닌 바로 밑으로 빠져 나간다.
+		result = num1 - num2;		//실행한다
+	else if (opt == 3)					
+		result = num1 * num2;		//실행한다
+	else					
+		result = num1 / num2;		// 실행한다
+
+	printf("결과: %f \n", result);		//조건식이 차례대로 실행되고 나서 마지막 결과값을 출력한다.
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num, abs;		//num과 abs변수 선언
+	printf("정수 입력: ");
+	scanf("%d", &num);	//사용자로부터 입력을 받는다.
+
+	abs = num > 0 ? num : num * (-1);	//abs의 값이 num>0보다 크면(참) 일반 num값이 출력하고, num<0보다 작으면(거짓) num*-1를 한다. 이것은 삼항연산자라고 부른다.
+	printf("절댓값: %d \n", abs);
+	return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void)
+{
+	int num;	//num변수를 선언한다
+
+	for (num = 1; num < 100; num++)	//num1=> 초기식; num<100은 조건식; num++은 증감식;
+	{
+		
+		if (num % 7 == 0 || num % 9 == 0)	//num
+				printf("7 또는 9의 배수: %d \n", num);
+	
+
+	}
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int sum = 0, num = 0;		//int의 값을 sum과 num에 저장한다.
+
+	while (1)	// 무한반복을 한다.
+	{
+		sum += num; //num에 값을 더해서 sum에 저장한다.
+		if (sum > 5000)
+			break;	//break문 실행! 따라서 가장 가까운 반복문을 탈출한다.
+		num++;		//num에 값을 증감
+	}
+
+	printf("sum: %d \n", sum);
+	printf("num: %d \n", num);
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int num;
+	printf("start! ");
+
+	for (num = 1; num < 20; num++)	//num=1 초기식; num < 20은 조건식 num++ 증감식
+	{
+		if (num % 2 == 0 || num % 3 == 0)
+			continue;
+
+	}
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int i, j;
+	for (i = 2; i <= 9; i++) {
+		if (i % 2 != 0) continue;
+		for (j = 1; j <= 9; j++) {
+			printf("%2d x %2d = %2d\n", i, j, i * j);
+			if (i == j) break;
+		}
+		printf("\n");
+	}
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int score = 0;
+	printf("성적을 입력하세요 : ");
+	scanf("%d", &score);
+
+	switch (score) {
+	case 100: case 99: case 98:
+	case 97: case 96: case 95:
+		printf("%d : A+\n", score);
+		break;
+
+	case 94: case 93: case 92:
+	case 91: case 90:
+		printf("%d : A\n", score);
+		break;
+
+	case 89: case 88: case 87:
+	case 86: case 85:
+		printf("%d : A\n", score);
+		break;
+	}
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int num;
+	printf("1이상 5이하의 정수 입력: ");
+	scanf("%d", &num);
+
+	switch (num)	//switch문에 전달되는 인자는 num이다., num에 저장된 값에 따라서 실행할 영역이 결정된다.
+	{
+	case 1:						//case문으로 switch문에 전달된 인자의 값에 해당되는 파트로 넘어간다.	
+		printf("1은 ONE \n");
+		break;					//break문으로 빠져 나가면 default를 건너뛰고 끝내고 return 0으로 넘어간다
+
+	case 2:
+		printf("2은 ONE \n");
+		break;
+
+	case 3:
+		printf("3은 ONE \n");
+		break;
+
+	case 4:
+		printf("1은 ONE \n");
+		break;
+
+	case 5:
+		printf("1은 ONE \n");
+		break;
+	default:							//case에 해당이 안되는 경우에는 default값이 실행된다.
+		printf("잘 모르겠다\n" );
+
+	}
+	return 0
+}
+
+*/
+/*
+int main(void)
+{
+	int score = 0;
+	do {
+		printf("성적을 입력하세요 : ");
+		scanf("%d", &score);
+	} while (score < 0 || score > 100);
+
+	switch (score) {
+	case 100: case 99: case 98:
+	case 97: case 96: case 95:
+		printf("%d : A+\n", score);
+		break;
+	case 94: case 93: case 92: case 91: case 90:
+		printf("%d : A\n", score);
+		break;
+	case 89: case 88: case 87: case 86: case 85:
+		printf("%d : B+\n", score);
+		break;
+	case 84: case 83: case 82: case 81: case 80:
+		printf("%d : B\n", score);
+		break;
+	case 79: case 78: case 77: case 76: case 75:
+		printf("%d : C+\n", score);
+		break;
+	case 74: case 73: case 72: case 71: case 70:
+		printf("%d : C\n", score);
+		break;
+	case 69: case 68: case 67: case 66: case 65:
+		printf("%d : D+\n", score);
+		break;
+	case 64: case 63: case 62: case 61: case 60:
+		printf("%d : D\n", score);
+		break;
+	default:
+		printf("%d : F\n", score);
+		break;
+	}
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int Add(int num1, int num2)
+{
+	return num1 + num2;
+}
+
+int main(void)
+{
+	int result;
+	result = Add(3, 4);
+	printf("덧셈결과1: %d \n", result);
+	result = Add(5, 8);
+	printf("덧셈결과2: %d \n", result);
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+int Add(int num1, int num2)		//인자전달 (0), 반환 값(o)
+{
+	return num1 + num2;
+}
+
+void ShowAddResult(int num)		//인자전달 (o), 반환 값(o)
+{
+	printf("덧셈결과 출력: %d \n", num);
+}
+
+int ReadNum(void)		// 인자전달(x), 반환 값(o)
+{
+	int num;
+	scanf("%d", &num);
+	return num;
+}
+
+void HowToUseThisProg(void)		//인자전달(x), 반환 값(x)
+{
+	printf("두 개의 정수를 입력하시면 덧셈결과가 출력됩니다. \n");
+	printf("자! 그럼 두 개의 정수를 입력하세요. \n");
+}
+
+int main(void)
+{
+	int result, num1, num2;
+	HowToUseThisProg();
+	num1 = ReadNum();
+	num2 = ReadNum();
+	result = Add(num1, num2);
+	ShowAddResult(result);
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+int NumberCompare(int num1, int num2);
+
+int main(void)
+{
+	printf("3과 4중에서 큰 수는 %d 이다. \n", NumberCompare(3, 4));
+	printf("7과 2중에서 큰 수는 %d 이다. \n", NumberCompare(7, 2));
+	return 0;
+}
+
+int NumberCompare(int num1, int num2)
+{
+	if (num1 > num2)
+		return num1;
+	else
+		return num2;
+}
+*/
+
+/*
+#include<stdio.h>
+int AbsoCompare(int num1, int num2);	//절대값이 큰 정수 반환
+int GetAbsoValue(int num);		//전달인자의 절댓값을 반환
+
+int main(void)
+{
+	int num1, num2;
+	printf("두 개의 정수 입력: ");
+	scanf("%d %d", &num1, &num2);
+	printf("%d와 %d중 절댓값이 큰 정수: %d \n",
+		num1, num2, AbsoCompare(num1, num2));
+	return 0;
+}
+
+int AbsoCompare(int num1, int num2)
+{
+	if (GetAbsoValue(num1) > GetAbsoValue(num2))
+		return num1;
+	else
+		return num2;
+}
+
+int GetAbsoValue(int num)
+*/
+
+
+/*
+#include<stdio.h>
+
+int MaxNum(int n1, int n2, int n3)
+{
+	if (n1 > n2)
+		return (n1 > n3) ? n1 : n3;
+	else
+		return (n2 > n3) ? n2 : n3;
+}
+
+int MinNum(int n1, int n2, int n3)
+{
+	if (n1 < n2)
+		return (n1 < n3) ? n1 : n3;
+	else
+		return (n2 < n3) ? n2 : n3;
+}
+
+int main(void)
+{
+	int num1, num2, num3;
+	printf("세 개의 정수 입력: ");
+	scanf("%d %d %d", &num1, &num2, &num3);
+	printf("가장 큰 수: %d \n", MaxNum(num1, num2, num3));
+	printf("가장 작은 수: %d \n", MinNum(num1, num2, num3));
+	return 0;
+}
+*/
+/*
+#include<stdio.h>
+
+void SimpleFunc(void)
+{
+	static int num1 = 0;	//초기화하지 않으면 0 초기화
+	int num2 = 0;			//초기화하지 않으면 쓰레기 값 초기화
+	num1++, num2++;
+	printf("static: %d, local: %d \n", num1, num2);
+}
+
+int main(void)
+{
+	int i;
+	for (i = 0; i < 3; i++)
+		SimpleFunc();
+	return 0;
+}
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	int arr[5];
+	int sum = 0, i;
+
+	arr[0] = 10, arr[1] = 20, arr[2] = 30, arr[3] = 40, arr[4] = 50;
+
+	for (i = 0; i < 5; i++)
+		sum += arr[i];
+
+	printf("배열요소에 저장된 값의 합: %d \n", sum);
+	return 0;
+}
+
+
+
+*/
+/*
+#include<stdio.h>
+
+int main(void)
+{
+	char str[] = "Good morning!";
+	printf("배열 str의 크기: %d \n", sizeof(str));
+	printf("널 문자 문자형 출력: %c \n", str[13]);
+	printf("널 문자 정수형 출력: %d \n", str[13]);
+
+	str[12] = '?';		//배열 str에 저장된 문자열 데이터는 변경 가능!
+	printf("문자열 출력: %s \n", str);
+	return 0;
+}
+*/
+
+#include<stdio.h>
+
+int main(void)
+{
+	int num1 = 100, num2 = 100;
+	int* pnum;
+
+	pnum = &num1;		// 포인터 pnum이 num1을 가리킴
+	(*pnum) += 30;		// num1+=30; 과 동일
+
+	pnum = &num2;		//포인터 pnum이 num2를 가리킴
+	(*pnum) -= 30;		// num2-=30; 과 동일
+
+	printf("num1:%d, num2:%d \n", num1, num2);
+	return 0;
+}
+
+
+#include <stdio.h>
+
+int main(void)
+{
+	int num1 = 100, num2 = 100;
+	int pnum;
+
+	pnum = &num1;
+	(pnum) += 30;
+	printf("Address of num1 : %p\n", &num1);
+	printf("value of pnum : %p\n", pnum);
+	printf("Address of pnum : %p\n", &pnum);
+
+	pnum = &num2;
+	(*pnum) += 30;
+	printf("Address of num2 : %p\n", &num2);
+	printf("value of pnum : %p\n", pnum);
+	printf("Address of pnum : %p\n", &pnum);
+
+	printf("num1 : %d, num2 : %d\n", num1, num2);
+
+	return 0;
+}

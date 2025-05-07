@@ -8,22 +8,22 @@ typedef struct point
 
 typedef struct rectangle
 {
-	point ul;	//ÁÂ»ó´Ü
-	point lr;	//¿ì»ó´Ü
+	point ul;	//ì¢Œìƒë‹¨
+	point lr;	//ìš°ìƒë‹¨
 } rectangle;
 
 void show_rec_area(rectangle rec)
 {
-	printf("³ĞÀÌ: %d \n",
+	printf("ë„“ì´: %d \n",
 		(rec.lr.xpos - rec.ul.xpos) * (rec.lr.ypos - rec.ul.ypos));
 }
 
 void show_rec_pos(rectangle rec)
 {
-	printf("ÁÂ »ó´Ü: [%d, %d] \n", rec.ul.xpos, rec.ul.ypos);
-	printf("ÁÂ ÇÏ´Ü: [%d, %d] \n", rec.ul.xpos, rec.ul.ypos);
-	printf("¿ì »ó´Ü: [%d, %d] \n", rec.lr.xpos, rec.lr.ypos);
-	printf("¿ì ÇÏ´Ü: [%d, %d] \n", rec.lr.xpos, rec.lr.ypos);
+	printf("ì¢Œ ìƒë‹¨: [%d, %d] \n", rec.ul.xpos, rec.ul.ypos);
+	printf("ì¢Œ í•˜ë‹¨: [%d, %d] \n", rec.ul.xpos, rec.ul.ypos);
+	printf("ìš° ìƒë‹¨: [%d, %d] \n", rec.lr.xpos, rec.lr.ypos);
+	printf("ìš° í•˜ë‹¨: [%d, %d] \n", rec.lr.xpos, rec.lr.ypos);
 }
 
 int main(void)
@@ -36,3 +36,5 @@ int main(void)
 	show_rec_pos(rec2);
 	return 0;
 }
+
+//update

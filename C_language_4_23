@@ -1,6 +1,6 @@
 /*
 #include <stdio.h>
-
+..
 int main(void)
 {
 	printf("제 이름은 정영호입니다\n");
